@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 
+
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,7 +20,7 @@
                 <ul>
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
-                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Projects</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Contact us</a></li>
                 </ul>
@@ -46,32 +48,60 @@
                         voluptatem eum obcaecati fugit perspiciatis pariatur!
                     </p>
 
-<!--======================== About tab sectopm =======================-->
+                    <!--======================== About tab sectopm =======================-->
 
                     <div class="tab_tittle">
-                        <p class="tab_links active_link" >
+                        <p class="tab_links active_link" onclick="opentab('Skills')">
                             Skills
                         </p>
-                        <p class="tab_links active_link" >
+                        <p class="tab_links" onclick="opentab('Experience')">
                             Experience
                         </p>
-                        <p class="tab_links active_link" >
+                        <p class="tab_links" onclick="opentab('Education')">
                             Education
                         </p>
                     </div>
 
-                    <div class="tab-contents">
+                    <div class="tab-contents active_tab" id="Skills">
                         <ul>
                             <li>
                                 <span>Machine Learning</span><br>Training the machine learning model
                             </li>
                             <li>
-                                <span>Data analysis</span><br>analyse the large data. 
+                                <span>Data analysis</span><br>analyse the large data.
                             </li>
                             <li>
                                 <span>Python</span><br>Python developer and automation
                             </li>
-                           
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents " id="Experience">
+                        <ul>
+                            <li>
+                                <span>Machine Learning</span><br>Training the machine learning model
+                            </li>
+                            <li>
+                                <span>Data hi</span><br>analyse the large data.
+                            </li>
+                            <li>
+                                <span>Python</span><br>Python developer and automation
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="Education">
+                        <ul>
+                            <li>
+                                <span>Machine Learning</span><br>Training the machine learning model
+                            </li>
+                            <li>
+                                <span>Data hello</span><br>analyse the large data.
+                            </li>
+                            <li>
+                                <span>Python</span><br>Python developer and automation
+                            </li>
+
                         </ul>
                     </div>
 
@@ -80,6 +110,66 @@
             </div>
         </div>
     </div>
+
+
+    <!-- ====================== Project ++++++++++++++++++++++++ -->
+    <div id="Project">
+        <div class="container">
+            <h1 class="sub-tittle">Projects</h1>
+            <div class="Project_list">
+                <div>
+                    <h2>hello</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
+                        nesciunt in ducimus quam at magni eligendi repellendus, consequatur nostrum adipisci ipsum,
+                        porro maiores deleniti sequi odio hic.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <h2>hello</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
+                        nesciunt in ducimus quam at magni eligendi repellendus, consequatur nostrum adipisci ipsum,
+                        porro maiores deleniti sequi odio hic.</p>
+                    <a href="#">Learn More</a>
+                </div>
+
+                <div>
+                    <h2>hello</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
+                        nesciunt in ducimus quam at magni eligendi repellendus, consequatur nostrum adipisci ipsum,
+                        porro maiores deleniti sequi odio hic.</p>
+                    <a href="#">Learn More</a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+
+
+    </div>
+
+
+    <!-- JavaScript for the About me section botton-->
+    <script>
+
+        var tablinks = document.getElementsByClassName("tab_links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname) {
+            for (tablink of tablinks) {
+                tablink.classList.remove("active_link");
+            }
+            for (tabcontent of tabcontents) {
+                tabcontent.classList.remove("active_tab");
+            }
+
+            //  ============= JavaScript for the View tab info =================  //
+            event.currentTarget.classList.add("active_link");
+            document.getElementById(tabname).classList.add("active_tab");
+        }
+
+    </script>
 
 
 </body>
