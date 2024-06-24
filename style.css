@@ -1,0 +1,211 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+/* Body */
+
+body{
+    background-color: #080808;
+    color: #ffff;
+    /* overflow: hidden; */
+
+}
+
+
+/* Header */
+#header{
+    width: 100%;
+    height: 110vh;
+    background-image: url(images/profile_image.png);
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.container{
+    padding: 0px 10%;
+}
+
+/* Nav */
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    margin: 10px 25px;
+}
+
+/* Nav botton */
+nav ul li a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+}
+
+nav ul li a::after{
+    content: "";
+    width: 0%;
+    height: 6px;
+    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.4s;
+}
+
+nav ul li a:hover::after{
+    width: 100%;
+}
+
+/* Logo */
+
+.logo{
+    width: 140px;
+}
+
+
+/* Heading name text */
+.header-text{
+    margin-top: 20%;
+    margin-left: 60%;
+    font-size: 30px;
+}
+
+.header-text h1{
+    font-size: 55px;
+    margin-top: 20px;
+
+}
+
+.header-text h1 span{
+    background: linear-gradient(135deg, #FC466B 0%, #3F5EFB 25%, #f66e48 50%, #FC466B 75%, #3F5EFB 100%);
+    background-size: 400%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: animate 10s linear infinite;
+
+}
+
+@keyframes animate{
+    100%{
+        background-position: 400%;
+    }
+}
+
+
+/* ======================About =================== */
+
+#about{
+    padding: 80px 0;
+    color: #ababab;
+
+
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/* ==================== About tab section =============================== */
+
+.tab_tittle{
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+
+.tab_links{
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab_links::after{
+    content: "";
+    width: 0px;
+    height: 3px;
+    background-color: #FC466B;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.4s;
+}
+
+
+.tab_links.active_link::after{
+    width: 50%;
+}
+
+/* ---------------- FOR Image ---------------------------------*/
+.about-col-1{
+    flex-basis: 35%;
+
+}
+
+.about-col-1 img{
+    width: 100%;
+    /* height: 80%; */
+    border-radius: 20px;
+}
+
+/* ------------------------ For Test About me ---------------------------------*/
+
+.about-col-2{
+    flex-basis: 55%;
+
+}
+
+.sub-tittle{
+    font-size: 60px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tab-contents{
+    display: none;
+}
+
+.tab-contents ul li{
+    list-style: none;
+    margin: 10px 0;
+
+}
+
+.tab-contents ul li span{
+    color: #b54769;
+    font-size: 14px;
+}
+
+
+.tab-contents.active_tab{
+    display: block;
+}
+
+
+/* ---------------------------- Project ------------------------- */
+#Project{
+    padding: 30px 0;
+}
+
+.Project_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 40px;
+    margin-top: 50px;
+}
