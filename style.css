@@ -198,14 +198,175 @@ nav ul li a:hover::after{
 }
 
 
-/* ---------------------------- Project ------------------------- */
+/* ---------------------------- Services ------------------------- */
 #Project{
     padding: 30px 0;
 }
 
-.Project_list{
+.services_list{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-gap: 40px;
+    grid-gap: 50px;
     margin-top: 50px;
+    justify-content: space-around;
+    text-align: justify;
+}
+
+/* .services_list div{
+    background: #262626;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 15px;
+    transition: background 0.5s, transform 0.5s;
+} */
+
+.services_list div img{
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+.services_list div h1{
+    font-size: 30px;
+    font-weight: 50;
+    margin-bottom: 30px;
+}
+
+.services_list div a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 20px;
+    display: inline-block;
+}
+
+/* .services_list div:hover{
+     /* background: #ff77a2; 
+    background: #FC466B; 
+    background: linear-gradient(135deg, #fc466a79 0%, #3f5efb71 25%, #f66e487b 50%, #fc466a79 75%, #3f5efb76 100%);
+    transform: translateY(-10px);
+} */
+
+
+.services_list div {
+    position: relative;
+    background: #262626;
+    padding: 40px;
+    font-size: 14px;
+    font-weight: 400;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.5s;
+}
+
+.services_list div::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #fc466a79 0%, #3f5efb71 25%, #f66e487b 50%, #fc466a79 75%, #3f5efb76 100%);
+    z-index: -1;
+    transition: opacity 0.5s;
+    opacity: 0; 
+}
+
+.services_list div:hover::before {
+    opacity: 1;
+}
+
+.services_list div:hover {
+    transform: translateY(-10px);
+}
+
+
+/* ===================== Projects ====================== */
+
+#projects{
+    padding: 50px 0;
+}
+
+.work_list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 50px;
+    margin-top: 50px;
+}
+
+.work {
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+
+}
+
+.work img{
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+    transition: transform 0.5s;
+
+}
+
+.layer{
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0.6) ,10% ,#f66e48be 50%, #fc466ad5 75%, #ff005171 100%);
+    border-radius: 10px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition:  0.5s;
+    padding: 0px;
+    color: white;
+    /* opacity: 0; 
+    transition: opacity 0.5s; */
+}
+
+
+/* .work:hover .layer {
+     opacity: 1;  /* Show the overlay on hover  
+}  */
+
+
+.layer h3{
+    font-weight: 500;
+    margin-bottom: 20px;
+
+}
+.layer p{
+    margin: 0 0 20px;
+}
+
+.layer a{
+    text-decoration: none;
+    color: #ff004f;
+    font-size: 18px;
+    margin-top: 20px;
+    display: inline-block;
+    line-height: 60px;
+    background: white;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img{
+    transform: scale(1.1);
+
+}
+
+.work:hover .layer{
+    width: 100%;
 }
