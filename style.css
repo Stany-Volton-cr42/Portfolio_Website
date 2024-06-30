@@ -370,3 +370,71 @@ nav ul li a:hover::after{
 .work:hover .layer{
     width: 100%;
 }
+/* =========== See more Botton ==============*/
+
+.btn{
+    display: block;
+    margin: 50px auto;
+    width: fit-content;
+    border: 1px solid #ff005148;
+    padding: 14px 50px;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden; 
+    z-index: 0; 
+    background: #000;
+}
+
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,0), #f66e48be 0%, #fc466ad5 75%, #ff005171 100%);
+    transition: opacity 0.5s;
+    opacity: 0;
+    z-index: -1; 
+}
+
+.btn:hover::before {
+    opacity: 1;
+}
+
+/* ----------------Contact ---------------- */
+
+.contact_left{
+    flex-basis: 35%;
+
+}
+
+.contact_right{
+    flex-basis: 65%;
+}
+
+.contact_left p{
+    margin-top: 30px;
+}
+
+.contact_left p i{
+    color: rgba(255, 0, 238, 0.507);
+    font-size: 30px;
+    margin-right: 15px;
+}
+
+.social_media_icon{
+    margin-top: 30px;
+}
+
+.social_media_icon a{
+    text-decoration: none;
+    font-size: 30px;
+    margin-right: 15px;
+    color: #ababab;
+    display: inline-block;
+    
+}
