@@ -421,7 +421,7 @@ nav ul li a:hover::after{
 }
 
 .contact_left p i{
-    color: rgba(255, 0, 238, 0.507);
+    color: #ff00ee81;
     font-size: 30px;
     margin-right: 15px;
 }
@@ -436,5 +436,97 @@ nav ul li a:hover::after{
     margin-right: 15px;
     color: #ababab;
     display: inline-block;
+    transition: transform 0.5s;
     
+}
+
+.social_media_icon a:hover{
+    color: #ff0051;
+    transform: translateY(-5px);
+}
+
+.btn.btn2{
+    display: inline-block;
+    background: linear-gradient(rgba(0,0,0,0), #f66e48be 0%, #fc466ad5 75%, #ff005171 100%);
+}
+
+.contact_right form{
+    width: 100%;
+}
+
+form input, form textarea{
+    width: 100%;
+    padding: 15px;
+    border: 0;
+    margin: 15px 0;
+    border: 1px solid #ababab;
+    outline: none;
+    font-size: 15px;
+    color: #fff;
+    background: #262626;
+    transition: all 0.5s;
+}
+
+form .btn2{
+    padding: 14px 60px;
+    font-size: 20px;
+    margin-top: 15px;
+    cursor: pointer;
+}
+
+
+.Copyright{
+    width: 100%;
+    text-align: center;
+    padding: 25px 0;
+    background: #262626;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+
+/* CSS for responsiveness and small screen. */
+nav .fa-solid{
+    display: none;
+}
+
+@media only screen and (max-width: 600px) {
+    #header{
+        background-image: url(images/mobile_image.png);
+    }
+    .header-text{
+        margin-top: 100%;
+        font-size: 16px;
+    }
+    .header-text h1{
+        font-size: 25px;
+    }
+    nav .fa-solid{
+        display: block;
+        font-size: 25px;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+    }
+    nav ul{
+        background: linear-gradient(45deg, #fc466adf 0%, #3f5efbdc 25%, #f66e48d7 50%, #fc466ad9 75%, #3f5efbd8 100%);
+        position: fixed;
+        top: 0;
+        left: -200px;
+        width: 200px;
+        height: 100vh;
+        padding-top: 50px;
+        z-index: 2;
+    } 
+    nav ul li{
+        display: block;
+        margin: 25px;
+    }
+    nav ul .fa-solid{
+        font-size: 32px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+        cursor: pointer;
+    }
 }
