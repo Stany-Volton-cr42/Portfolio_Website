@@ -18,13 +18,15 @@
             <nav>
                 <!-- Nav Botton -->
                 <img style="height: 2%; width: 12%;" class="logo" src="images/Vivek_Logo.png" alt="Logo">
-                <ul>
+                <ul id="sidemenu">
                     <li><a href="#">Home</a></li>
                     <li><a href="#">About Us</a></li>
                     <li><a href="#">Projects</a></li>
                     <li><a href="#">Skills</a></li>
                     <li><a href="#">Contact us</a></li>
+                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
+                <i class="fa-solid fa-bars-staggered" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
@@ -252,6 +254,18 @@
             document.getElementById(tabname).classList.add("active_tab");
         }
 
+    </script>
+
+    <script>
+        var sidemenu = document.getElementById("sidemenu")
+
+        function openmenu(){
+            sidemenu.style.left = "0";
+        }
+
+        function closemenu(){
+            sidemenu.style.left = "-200px";
+        }
     </script>
 
 
