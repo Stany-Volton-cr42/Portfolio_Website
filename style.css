@@ -5,6 +5,23 @@
     box-sizing: border-box;
 }
 
+/* Style the scrollbar track */
+::-webkit-scrollbar {
+    width: 16px;
+}
+
+/* Style the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+    background-color: #fc466a82;  
+    border-radius: 5px; 
+}
+
+/* Style the scrollbar track (optional) */
+::-webkit-scrollbar-track {
+    background: #080808e8;  
+}
+
+
 /* Body */
 
 body{
