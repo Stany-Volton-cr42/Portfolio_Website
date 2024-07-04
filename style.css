@@ -509,19 +509,22 @@ nav .fa-solid{
 
 @media only screen and (max-width: 600px) {
     #header{
-        background-image: url(images/Mobile_final.png);
+        background-image: url(images/mobile.png);
+        width: 100%;
     }
     .header-text{
         margin-top: 100%;
         font-size: 20px;
     }
     .header-text h1{
+        margin-top: 99px;
         font-size: 40px;
         margin-right: 30px;
     }
     .header-text p{
         font-size: 25px;
-        margin-right: 30px;
+        position: relative;
+        top: 80px;
     }
     nav .fa-solid{
         display: block;
