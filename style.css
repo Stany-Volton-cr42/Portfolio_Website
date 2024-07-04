@@ -521,11 +521,11 @@ nav .fa-solid{
         font-size: 40px;
         margin-right: 30px;
     }
-    .header-text p{
+    /* .header-text p{
         font-size: 25px;
-        /* position: relative; */
-        top: 80px;
-    }
+        /* position: relative;
+        top: 80px; */
+    /* } */
     nav .fa-solid{
         display: block;
         font-size: 31px;
