@@ -517,10 +517,14 @@ nav .fa-solid{
         font-size: 20px;
     }
     .header-text h1{
+        margin: 0;
+        padding: 0;
         font-size: 33px;
         margin-left: 20px;
     }
     .header-text p{
+        margin: 0;
+        padding: 0;
         font-size: 16px;
         position: relative;
         top: 60px;
