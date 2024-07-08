@@ -77,7 +77,7 @@ nav ul li a::after{
     content: "";
     width: 0%;
     height: 6px;
-    background: linear-gradient(90deg, #FC466B 0%, #3F5EFB 100%);
+    background: linear-gradient(rgba(0,0,0,0) ,0% ,#f66e48be 50%, #fc466ad5 75%, #ff005171 100%);
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -109,7 +109,7 @@ nav ul li a:hover::after{
 }
 
 .header-text h1 span{
-    background: linear-gradient(135deg, #FC466B 0%, #3F5EFB 25%, #f66e48 50%, #FC466B 75%, #3F5EFB 100%);
+    background: linear-gradient(rgba(0,0,0,0) ,0% ,#f66e48be 50%, #fc466ad5 75%, #ff005171 100%);
     background-size: 400%;
     background-clip: text;
     -webkit-background-clip: text;
