@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+html{
+    scroll-behavior: smooth;
+}
+
 /* Style the scrollbar track */
 ::-webkit-scrollbar {
     width: 16px;
@@ -583,4 +587,22 @@ nav .fa-solid{
     .Copyright{
         font-size: 12px;
     }
+}
+
+/* Contact form message conformation */
+
+
+#msg {
+    width: 30%;
+    padding: 15px;
+    display: none;  /* Initially hidden */
+    margin-top: -40px;
+    border: 1px solid #ababab;
+    border-radius: 6px;
+    text-decoration: none;
+    color: #fff;
+    position: relative;
+    overflow: hidden; 
+    z-index: 0;  
+    background: #262626;
 }
