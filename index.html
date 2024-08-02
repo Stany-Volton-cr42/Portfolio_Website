@@ -7,6 +7,14 @@
     <title>Personal portfelio website</title>
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/721efbf5a8.js" crossorigin="anonymous"></script>
+
+
+    <!-- Google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playwrite+AU+TAS:wght@100..400&family=Playwrite+IS:wght@100..400&family=Playwrite+MX:wght@100..400&family=Playwrite+US+Trad:wght@100..400&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
@@ -15,8 +23,8 @@
         <div class="container">
 
             <nav>
+                <h2><span>V</span>ivek</h2>
                 <!-- Nav Botton -->
-                <img style="height: 2%; width: 12%;" class="logo" src="images/Vivek_Logo.png" alt="Logo">
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About Us</a></li>
@@ -29,8 +37,9 @@
             </nav>
 
             <div class="header-text">
-                <p>Software Engineer</p>
                 <h1>Hi, I'm<span> Vivek</span> Raj.</h1>
+                <h2><span class="auto-type"></span></h2>
+
             </div>
         </div>
     </div>
@@ -122,7 +131,7 @@
                 <div>
                     <img style="height: 75px;" src="./images/machine-learning-icon-28.jpg" alt="">
 
-                    <h1>Machine Learning</h1>
+                    <h1>Web developer</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
                         nesciunt in ducimus quam at magni eligendi.</p>
                     <a href="#">Learn More</a>
@@ -130,7 +139,7 @@
 
                 <div>
                     <img style="height: 75px;" src="./images/final_data1.png" alt="">
-                    <h1>Data Analyst</h1>
+                    <h1>ML Engineer</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
                         nesciunt in ducimus quam at magni eligendi.</p>
                     <a href="#">Learn More</a>
@@ -138,7 +147,7 @@
 
                 <div>
                     <img style="height: 75px;" src="./images/Python_automation_-removebg-preview.png" alt="">
-                    <h1>Python Automation</h1>
+                    <h1>Python Developer</h1>
                     <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
                         nesciunt in ducimus quam at magni eligendi.</p>
                     <a href="#">Learn More</a>
@@ -172,7 +181,8 @@
                         <h3>Chat with website and pdf</h3>
                         <p>The document movie based on your interest,
                             and learn from user Interest and Behaviour</p>
-                        <a href="#">
+                        <a href="https://github.com/Stany-Volton-cr42/Chat_with_website/blob/main/src/app.py"
+                            target="_blank">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
@@ -183,7 +193,8 @@
                         <h3>Medicine recommendation system</h3>
                         <p>The document movie based on your interest,
                             and learn from user Interest and Behaviour</p>
-                        <a href="#">
+                        <a href="https://github.com/Stany-Volton-cr42/Disease_detection_and_medicine_recommendation_system"
+                            target="_blank">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
@@ -203,14 +214,14 @@
                 <div class="contact_left">
 
                     <h1 class="sub-tittle">Contact Me</h1>
-                    <p><i class="fa-regular fa-envelope"></i>Contact@example.com</p>
-                    <p><i class="fa-solid fa-phone-volume"></i>1234567890</p>
+                    <p class="contact-info"><i class="fa-regular fa-envelope"></i>vr559081@gmail.com</p>
+                    <p class="contact-info"><i class="fa-solid fa-phone-volume"></i>+91&nbsp;9661550048</p>
                     <div class="social_media_icon">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-twitter"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="https://www.linkedin.com/in/it-s-vivek/" target="_blank"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/Stany-Volton-cr42/" target="_blank"><i
+                                class="fab fa-github"></i></a>
+
                     </div>
                     <!-- Give the resume path on href -->
                     <a class="btn btn2" download href="./Vivek_Resume.pdf">Download Resume</a>
@@ -268,30 +279,44 @@
         }
     </script>
 
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxnicTulScc9fH1W7j9coIum6OfgWlGYndnwzsepAVvlBgKFDIFCoVTSilly6BRo4Hb/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById('msg')
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbxnicTulScc9fH1W7j9coIum6OfgWlGYndnwzsepAVvlBgKFDIFCoVTSilly6BRo4Hb/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
 
-    form.addEventListener('submit', e => {
-        e.preventDefault()
-        fetch(scriptURL, { method: 'POST', body: new FormData(form) })
-            .then(response => {
-                msg.innerHTML = "Message sent successfully"
-                msg.style.display = 'block'  
+        form.addEventListener('submit', e => {
+            e.preventDefault()
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    msg.innerHTML = "Message sent successfully"
+                    msg.style.display = 'block'
 
-                setTimeout(function () {
-                    form.reset()  
-                    msg.innerHTML = ""  
-                }, 1000)
+                    setTimeout(function () {
+                        form.reset()
+                        msg.innerHTML = ""
+                    }, 1000)
 
-                setTimeout(function () {
-                    msg.style.display = 'none'  
-                }, 2000)
-            })
-            .catch(error => console.error('Error!', error.message))
-    })
-</script>
+                    setTimeout(function () {
+                        msg.style.display = 'none'
+                    }, 2000)
+                })
+                .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+
+
+    <!-- JavaScript for auto-type annimation -->
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <script>
+        var typed = new Typed(".auto-type", {
+            strings: ["Web developer.", "Python developer.", "ML engineer."],
+            typeSpeed: 150,
+            backSpeed: 150,
+            loop: true
+        })
+    </script>
 
 
 
