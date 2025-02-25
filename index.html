@@ -23,23 +23,25 @@
         <div class="container">
 
             <nav>
-                <h2><span>V</span>ivek</h2>
-                <!-- Nav Botton -->
+                <h2 class="logo"><span>V</span>ivek</h2>
+                <!-- Nav Button -->
                 <ul id="sidemenu">
                     <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About Us</a></li>
+                    <li><a href="#about">About</a></li>
                     <li><a href="#Services">Services</a></li>
                     <li><a href="#projects">Projects</a></li>
-                    <li><a href="#contact">Contact us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                     <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
                 </ul>
                 <i class="fa-solid fa-bars-staggered" onclick="openmenu()"></i>
             </nav>
 
             <div class="header-text">
-                <h1>Hi, I'm<span> Vivek</span> Raj.</h1>
-                <h2><span class="auto-type"></span></h2>
-
+                <h1>Hi, I'm <span>Vivek</span> Raj</h1>
+                <div class="role-animation">
+                    <h2><span class="auto-type"></span></h2>
+                </div>
+                <p class="header-desc">Passionate about creating innovative solutions through code. Specializing in Machine Learning, Web Development, and Python Automation.</p>
             </div>
         </div>
     </div>
@@ -53,106 +55,144 @@
                     <img src="images/About_me2.png" alt="">
                 </div>
                 <div class="about-col-2">
-                    <h1 class="sub-tittle">About <span style="color: #ff0000b3;">Me</span></h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laudantium, dignissimos. Hic mollitia,
-                        nulla fugiat voluptas iste alias reiciendis, molestiae totam molestias sequi sunt corrupti
-                        voluptatem eum obcaecati fugit perspiciatis pariatur!
-                    </p>
-
-                    <!--======================== About tab sectopm =======================-->
+                    <h1 class="sub-tittle">About <span style="color: #fc466a;">Me</span></h1>
+                    <p>I am a passionate software developer with expertise in Machine Learning, Web Development, and Python Automation. 
+                    With a strong foundation in computer science and a keen eye for innovation, I strive to create impactful solutions 
+                    that make a difference. My journey in technology is driven by continuous learning and the desire to tackle challenging problems.</p>
 
                     <div class="tab_tittle">
-                        <p class="tab_links active_link" onclick="opentab('Skills')">
-                            Skills
-                        </p>
-                        <p class="tab_links" onclick="opentab('Experience')">
-                            Experience
-                        </p>
-                        <p class="tab_links" onclick="opentab('Education')">
-                            Education
-                        </p>
+                        <p class="tab_links active_link" onclick="opentab('Skills')">Skills</p>
+                        <p class="tab_links" onclick="opentab('Experience')">Experience</p>
+                        <p class="tab_links" onclick="opentab('Education')">Education</p>
+                        <p class="tab_links" onclick="opentab('Projects')">Projects</p>
+                        <p class="tab_links" onclick="opentab('Certifications')">Certifications</p>
                     </div>
 
-                    <div class="tab-contents active_tab" id="Skills">
-                        <ul>
-                            <li>
-                                <span>Machine Learning</span><br>Training the machine learning model
-                            </li>
-                            <li>
-                                <span>Data analysis</span><br>analyse the large data.
-                            </li>
-                            <li>
-                                <span>Python</span><br>Python developer and automation
-                            </li>
-                        </ul>
+                    <div class="tab-contents-container">
+                        <div class="tab-contents active_tab" id="Skills">
+                            <ul>
+                                <li>
+                                    <span>Web Development</span><br>
+                                    HTML, CSS, JavaScript, Framework (Bootstrap)
+                                </li>
+                                <li>
+                                    <span>Machine Learning</span><br>
+                                    Python, MySQL, Jupyter Notebook, NumPy, Pandas, Matplotlib, ML Algorithms
+                                </li>
+                                <li>
+                                    <span>App Development</span><br>
+                                    React Native
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="Experience">
+                            <ul>
+                                <li>
+                                    <span>Industrial training through Xpedio</span><br>
+                                    • Worked with a team to build a fully-fledged web-app.<br>
+                                    • Gained knowledge of React Native and app development.
+                                </li>
+                                <li>
+                                    <span>Internship at Academy of Skill Development (MSME)</span><br>
+                                    • Developed classic recommendation systems.
+                                </li>
+                                <li>
+                                    <span>Hackathon Participation</span><br>
+                                    • Participated in Hackathon in Reimagine-Sheryians.
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="tab-contents" id="Education">
+                            <ul>
+                                <li>
+                                    <span>Bachelor in Computer Application (2022 – 2025)</span><br>
+                                    Panjab Technical University
+                                </li>
+                                <li>
+                                    <span>XIIth (PCB) (2020 – 2022)</span><br>
+                                    +2 Janta High School
+                                </li>
+                                <li>
+                                    <span>Xth (2019 – 2020)</span><br>
+                                    Kerala English School
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="Projects">
+                            <ul>
+                                <li>
+                                    <span>Diseases detection and Medicine recommendation system <a href="https://github.com" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a></span><br>
+                                    • Developed a classic recommendation system showcasing algorithm capabilities.<br>
+                                    • Used SVC and explored other ML algorithms like Random Forests and Gradient Boosting.<br>
+                                    • Provided a user interface to enter symptoms as keywords.
+                                </li>
+                                <li>
+                                    <span>AI powered Chatbot for websites and PDFs <a href="https://github.com" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a></span><br>
+                                    • Takes multiple PDFs as input and provides answers based on the content.<br>
+                                    • API integration with ChatGPT.<br>
+                                    • Technology used: Python, LangChain framework, Streamlit.
+                                </li>
+                                <li>
+                                    <span>Personal portfolio Website <a href="https://github.com" class="project-link" target="_blank"><i class="fa-brands fa-github"></i></a></span><br>
+                                    • Created a responsive website using HTML, CSS, and JavaScript.
+                                </li>
+                            </ul>
+                        </div>
+                        
+                        <div class="tab-contents" id="Certifications">
+                            <ul>
+                                <li>
+                                    <span>Full Stack Developer Bootcamp – Edureka</span><br>
+                                    Project-based training program covering React, Bootstrap, PHP, MySQL, and more.
+                                </li>
+                                <li>
+                                    <span>Google Cloud Fundamentals: Core Infrastructure</span><br>
+                                    Coursera
+                                </li>
+                                <li>
+                                    <span>CS50x: Introduction to Computer Science</span><br>
+                                    Harvard University
+                                </li>
+                            </ul>
+                        </div>
                     </div>
-
-                    <div class="tab-contents " id="Experience">
-                        <ul>
-                            <li>
-                                <span>Machine Learning</span><br>Training the machine learning model
-                            </li>
-                            <li>
-                                <span>Data hi</span><br>analyse the large data.
-                            </li>
-                            <li>
-                                <span>Python</span><br>Python developer and automation
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="tab-contents" id="Education">
-                        <ul>
-                            <li>
-                                <span>Machine Learning</span><br>Training the machine learning model
-                            </li>
-                            <li>
-                                <span>Data hello</span><br>analyse the large data.
-                            </li>
-                            <li>
-                                <span>Python</span><br>Python developer and automation
-                            </li>
-
-                        </ul>
-                    </div>
-
-                    <!-- <h1>how to create animated skill bar using html and css only </h1> -->
                 </div>
             </div>
         </div>
     </div>
 
 
-    <!-- ====================== Project ++++++++++++++++++++++++ -->
+    <!-- ====================== Services Section ===================== -->
     <div id="Services">
         <div class="container">
-            <h1 class="sub-tittle">Services</h1>
+            <h1 class="sub-tittle">My <span style="color: #fc466a;">Services</span></h1>
             <div class="services_list">
                 <div>
-                    <img style="height: 75px;" src="./images/machine-learning-icon-28.jpg" alt="">
-
-                    <h1>Web developer</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
-                        nesciunt in ducimus quam at magni eligendi.</p>
-                    <a href="#">Learn More</a>
+                    <img src="./images/machine-learning-icon-28.jpg" alt="ML Icon">
+                    <h1>Machine Learning Solutions</h1>
+                    <p>Specialized in developing custom machine learning models, from data preprocessing to deployment. 
+                    Expertise in computer vision, NLP, and predictive analytics for real-world applications.</p>
+                    <a href="#projects">View ML Projects</a>
                 </div>
 
                 <div>
-                    <img style="height: 75px;" src="./images/final_data1.png" alt="">
-                    <h1>ML Engineer</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
-                        nesciunt in ducimus quam at magni eligendi.</p>
-                    <a href="#">Learn More</a>
+                    <img src="./images/final_data1.png" alt="Web Dev Icon">
+                    <h1>Web Development</h1>
+                    <p>End-to-end web development services including responsive design, frontend development with modern frameworks, 
+                    and robust backend solutions. Focus on creating seamless user experiences.</p>
+                    <a href="#projects">View Web Projects</a>
                 </div>
 
                 <div>
-                    <img style="height: 75px;" src="./images/Python_automation_-removebg-preview.png" alt="">
-                    <h1>Python Developer</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe, facere voluptatem! Eaque
-                        nesciunt in ducimus quam at magni eligendi.</p>
-                    <a href="#">Learn More</a>
+                    <img src="./images/Python_automation_-removebg-preview.png" alt="Python Icon">
+                    <h1>Python Development</h1>
+                    <p>Custom Python solutions for process automation, data analysis, and API development. 
+                    Expertise in creating efficient, scalable, and maintainable Python applications.</p>
+                    <a href="#projects">View Python Projects</a>
                 </div>
-
             </div>
         </div>
     </div>
@@ -162,87 +202,91 @@
 
     <div id="projects">
         <div class="container">
-            <h1 class="sub-tittle">My Projects</h1>
+            <h1 class="sub-tittle">Featured <span style="color: #fc466a;">Projects</span></h1>
             <div class="work_list">
                 <div class="work">
-                    <img src="./images/Movie recomendation system.png" alt="">
+                    <img src="./images/Movie recomendation system.png" alt="Movie Recommendation System">
                     <div class="layer">
-                        <h3>Movie recommendation system</h3>
-                        <p>The document movie based on your interest,
-                            and learn from user Interest and Behaviour</p>
-                        <a href="#">
+                        <h3>Movie Recommendation System</h3>
+                        <p>An AI-powered movie recommendation system that learns from user preferences and behavior. 
+                        Built using collaborative filtering and content-based filtering techniques.</p>
+                        <a href="#" target="_blank" title="View Project">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="./images/Chat with Website and PDF.png" alt="">
+                    <img src="./images/Chat with Website and PDF.png" alt="Chat with Website and PDF">
                     <div class="layer">
-                        <h3>Chat with website and pdf</h3>
-                        <p>The document movie based on your interest,
-                            and learn from user Interest and Behaviour</p>
-                        <a href="https://github.com/Stany-Volton-cr42/Chat_with_website/blob/main/src/app.py"
-                            target="_blank">
+                        <h3>Intelligent Document Chat</h3>
+                        <p>A smart chatbot system that can understand and answer questions about website content and PDF documents. 
+                        Powered by NLP and machine learning algorithms.</p>
+                        <a href="https://github.com/Stany-Volton-cr42/Chat_with_website/blob/main/src/app.py" target="_blank" title="View Project">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
                 <div class="work">
-                    <img src="./images/Madcine_recomendation_system.png" alt="">
+                    <img src="./images/Madcine_recomendation_system.png" alt="Medicine Recommendation System">
                     <div class="layer">
-                        <h3>Medicine recommendation system</h3>
-                        <p>The document movie based on your interest,
-                            and learn from user Interest and Behaviour</p>
-                        <a href="https://github.com/Stany-Volton-cr42/Disease_detection_and_medicine_recommendation_system"
-                            target="_blank">
+                        <h3>Medicine Recommendation System</h3>
+                        <p>An intelligent healthcare system that recommends appropriate medications based on symptoms and medical history. 
+                        Uses advanced ML algorithms with safety considerations.</p>
+                        <a href="https://github.com/Stany-Volton-cr42/Disease_detection_and_medicine_recommendation_system" target="_blank" title="View Project">
                             <i class="fa-solid fa-up-right-from-square"></i>
                         </a>
                     </div>
                 </div>
             </div>
-            <a class="btn" href="#">See More</a>
-
+            <a class="btn" href="https://github.com/Stany-Volton-cr42" target="_blank">View More Projects</a>
         </div>
     </div>
     </div>
 
 
-    <!-- ================= Contect Me ===================== -->
+    <!-- ================= Get In Touch ===================== -->
     <div id="contact">
         <div class="container">
             <div class="row">
                 <div class="contact_left">
-
-                    <h1 class="sub-tittle">Contact Me</h1>
-                    <p class="contact-info"><i class="fa-regular fa-envelope"></i>vr559081@gmail.com</p>
-                    <p class="contact-info"><i class="fa-solid fa-phone-volume"></i>+91&nbsp;9661550048</p>
-                    <div class="social_media_icon">
-                        <a href="https://www.linkedin.com/in/it-s-vivek/" target="_blank"><i
-                                class="fab fa-linkedin-in"></i></a>
-                        <a href="https://github.com/Stany-Volton-cr42/" target="_blank"><i
-                                class="fab fa-github"></i></a>
-
+                    <h1 class="sub-tittle">Get In <span style="color: #fc466a;">Touch</span></h1>
+                    <p class="contact-desc">I'm always interested in hearing about new projects and opportunities. 
+                    Whether you have a question or just want to say hi, feel free to reach out!</p>
+                    <div class="contact-info">
+                        <i class="fa-regular fa-envelope"></i>
+                        <span>vr559081@gmail.com</span>
                     </div>
-                    <!-- Give the resume path on href -->
-                    <a class="btn btn2" download href="./Vivek_Resume.pdf">Download Resume</a>
-                    <!-- Resume download  -->
+                    <div class="contact-info">
+                        <i class="fa-solid fa-phone-volume"></i>
+                        <span>+91 9661550048</span>
+                    </div>
+                    <div class="social_media_icon">
+                        <a href="https://www.linkedin.com/in/it-s-vivek/" target="_blank" title="LinkedIn Profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://github.com/Stany-Volton-cr42/" target="_blank" title="GitHub Profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="mailto:vr559081@gmail.com" title="Email Me">
+                            <i class="fa-regular fa-envelope"></i>
+                        </a>
+                    </div>
+                    <a class="btn btn2" download href="./Vivek_Resume.pdf">Download CV</a>
                 </div>
                 <div class="contact_right">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Type Your Message here...."></textarea>
-                        <button type="submit" class="btn btn2">Submit</button>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Send Message</button>
                     </form>
                     <span id="msg"></span>
                 </div>
             </div>
         </div>
 
-        <!-- Copyright Section -->
-
         <div class="Copyright">
-            <p>Copyright © Vivek Raj. All Copyrights are reserved for website.</p>
+            <p>© 2024 Vivek Raj. All rights reserved.</p>
         </div>
     </div>
 
@@ -262,7 +306,19 @@
 
             //  ============= JavaScript for the View tab info =================  //
             event.currentTarget.classList.add("active_link");
+            
+            // No delay needed with our improved CSS
             document.getElementById(tabname).classList.add("active_tab");
+            
+            // Adjust container height based on active content for mobile
+            const activeContent = document.getElementById(tabname);
+            const container = document.querySelector('.tab-contents-container');
+            
+            // On mobile, ensure container has proper height
+            if (window.innerWidth <= 600) {
+                const contentHeight = activeContent.offsetHeight;
+                container.style.minHeight = (contentHeight + 20) + 'px';
+            }
         }
 
     </script>
