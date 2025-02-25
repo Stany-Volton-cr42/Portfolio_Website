@@ -218,6 +218,7 @@ nav ul li a:hover::after{
 @media only screen and (max-width: 768px) {
     .header-text {
         padding: 0 5%;
+        transform: translateY(210px);
     }
 
     .header-text h1 {
@@ -254,6 +255,7 @@ nav ul li a:hover::after{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        transform: translateY(810px);
     }
     
     .header-text h1 {
@@ -1562,6 +1564,7 @@ form .btn2:hover {
     /* Improve header on medium screens */
     .header-text {
         margin-top: 0;
+        margin-bottom: 0px;
         transform: translateY(100px);
     }
     
