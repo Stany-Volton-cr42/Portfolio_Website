@@ -8,6 +8,10 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://kit.fontawesome.com/721efbf5a8.js" crossorigin="anonymous"></script>
 
+    <!-- Animation libraries -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
     <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -20,6 +24,12 @@
 <body>
 
     <div id="header">
+        <div id="particles-js"></div>
+        <!-- Profile image with srcset for responsive images -->
+        <picture>
+            <source media="(max-width: 600px)" srcset="images/Mobile_final_Nero.png">
+            <img src="images/profile_image_final.png" alt="Profile Image" class="profile-image">
+        </picture>
         <div class="container">
 
             <nav>
@@ -51,10 +61,10 @@
     <div id="about">
         <div class="container">
             <div class="row">
-                <div class="about-col-1">
+                <div class="about-col-1" data-aos="fade-right">
                     <img src="images/About_me2.png" alt="">
                 </div>
-                <div class="about-col-2">
+                <div class="about-col-2" data-aos="fade-left">
                     <h1 class="sub-tittle">About <span style="color: #fc466a;">Me</span></h1>
                     <p>I am a passionate software developer with expertise in Machine Learning, Web Development, and Python Automation. 
                     With a strong foundation in computer science and a keen eye for innovation, I strive to create impactful solutions 
@@ -168,9 +178,9 @@
     <!-- ====================== Services Section ===================== -->
     <div id="Services">
         <div class="container">
-            <h1 class="sub-tittle">My <span style="color: #fc466a;">Services</span></h1>
+            <h1 class="sub-tittle" data-aos="fade-up">My <span style="color: #fc466a;">Services</span></h1>
             <div class="services_list">
-                <div>
+                <div data-aos="fade-up" data-aos-delay="100">
                     <img src="./images/machine-learning-icon-28.jpg" alt="ML Icon">
                     <h1>Machine Learning Solutions</h1>
                     <p>Specialized in developing custom machine learning models, from data preprocessing to deployment. 
@@ -178,7 +188,7 @@
                     <a href="#projects">View ML Projects</a>
                 </div>
 
-                <div>
+                <div data-aos="fade-up" data-aos-delay="200">
                     <img src="./images/final_data1.png" alt="Web Dev Icon">
                     <h1>Web Development</h1>
                     <p>End-to-end web development services including responsive design, frontend development with modern frameworks, 
@@ -186,7 +196,7 @@
                     <a href="#projects">View Web Projects</a>
                 </div>
 
-                <div>
+                <div data-aos="fade-up" data-aos-delay="300">
                     <img src="./images/Python_automation_-removebg-preview.png" alt="Python Icon">
                     <h1>Python Development</h1>
                     <p>Custom Python solutions for process automation, data analysis, and API development. 
@@ -202,9 +212,9 @@
 
     <div id="projects">
         <div class="container">
-            <h1 class="sub-tittle">Featured <span style="color: #fc466a;">Projects</span></h1>
+            <h1 class="sub-tittle" data-aos="fade-up">Featured <span style="color: #fc466a;">Projects</span></h1>
             <div class="work_list">
-                <div class="work">
+                <div class="work" data-aos="zoom-in" data-aos-delay="100">
                     <img src="./images/Movie recomendation system.png" alt="Movie Recommendation System">
                     <div class="layer">
                         <h3>Movie Recommendation System</h3>
@@ -215,7 +225,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-aos="zoom-in" data-aos-delay="200">
                     <img src="./images/Chat with Website and PDF.png" alt="Chat with Website and PDF">
                     <div class="layer">
                         <h3>Intelligent Document Chat</h3>
@@ -226,7 +236,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="work">
+                <div class="work" data-aos="zoom-in" data-aos-delay="300">
                     <img src="./images/Madcine_recomendation_system.png" alt="Medicine Recommendation System">
                     <div class="layer">
                         <h3>Medicine Recommendation System</h3>
@@ -248,7 +258,7 @@
     <div id="contact">
         <div class="container">
             <div class="row">
-                <div class="contact_left">
+                <div class="contact_left" data-aos="fade-right">
                     <h1 class="sub-tittle">Get In <span style="color: #fc466a;">Touch</span></h1>
                     <p class="contact-desc">I'm always interested in hearing about new projects and opportunities. 
                     Whether you have a question or just want to say hi, feel free to reach out!</p>
@@ -273,7 +283,7 @@
                     </div>
                     <a class="btn btn2" download href="./Vivek_Resume.pdf">Download CV</a>
                 </div>
-                <div class="contact_right">
+                <div class="contact_right" data-aos="fade-left">
                     <form name="submit-to-google-sheet">
                         <input type="text" name="Name" placeholder="Your Name" required>
                         <input type="email" name="Email" placeholder="Your Email" required>
@@ -366,6 +376,17 @@
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
 
     <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            mirror: false
+        });
+
+        /* particlesJS.load(@dom-id, @path-json, @callback (optional)); */
+        particlesJS.load('particles-js', 'particles.json', function() {
+            console.log('callback - particles.js config loaded');
+        });
+        
         var typed = new Typed(".auto-type", {
             strings: ["Web developer.", "Python developer.", "ML engineer."],
             typeSpeed: 150,
