@@ -40,12 +40,12 @@ body{
 #header{
     width: 100%;
     height: 110vh;
-    background-image: url(images/profile_image_final.png);
-    background-size: cover;
-    background-position: center;
+    background: none;
     position: relative;
+    overflow: hidden;
 }
 
+/* Dark overlay for better particle visibility */
 #header::before {
     content: '';
     position: absolute;
@@ -53,24 +53,72 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.3));
+    background: rgba(0,0,0,0.5);
+    z-index: 3;
+}
+
+/* Remove the profile image pseudo-element */
+#header::after {
+    display: none; /* Disable the pseudo-element */
+}
+
+/* Style for the profile image as an img tag */
+.profile-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: 1;
+    animation: fadeInScale 1s ease-out;
+}
+
+/* Profile image animation */
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Ensure picture element takes full screen */
+picture {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
     z-index: 1;
 }
 
+
+
+
+/* Container above particles */
 .container{
     padding: 0px 10%;
     position: relative;
-    z-index: 2;
+    z-index: 3;
 }
 
 /* Nav */
 
 nav{
+    position: fixed;
+    width: 100%;
+    z-index: 10;  /* Ensure navbar is above all content */
+    background: rgba(0,0,0,0.3);
+    padding: 20px 10%;
+    backdrop-filter: blur(5px);
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-wrap: wrap;
-    padding: 0px 0;
 }
 
 nav .logo{
@@ -154,29 +202,37 @@ nav ul li a:hover::after{
 }
 
 
-/* Header Text Styling - CLEAN VERSION */
+/* Header Text Styling */
 .header-text {
     position: absolute;
-    left: 0;
     right: 0;
-    top: 0;
-    bottom: 0;
-    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100%;
-    padding: 0;
-    text-align: center;
+    justify-content: center;
     z-index: 5;
-    transform: translateY(250px); /* Move the section 110px down */
-    margin-top: 80px;
+    text-align: center;
+    padding: 0 5%;
 }
 
 .header-text h1 {
-    display: none; /* Hide the h1 element with "Hi, I'm Vivek Raj" */
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #ffffff;
+}
+
+.header-text h2 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: #f66e48;
+}
+
+.header-text h1 span {
+    color: #fc466a;
+    text-shadow: 0 0 15px rgba(252, 70, 107, 0.5);
 }
 
 .role-animation {
@@ -188,21 +244,22 @@ nav ul li a:hover::after{
 .role-animation h2 {
     font-size: 40px;
     display: inline-block;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
 .auto-type {
     color: #fa3c3cbd;
     font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px rgba(250, 60, 60, 0.5);
 }
 
 .header-desc {
-    font-size: 20px;
+    font-size: 1.2rem;
     line-height: 1.6;
     color: #e0e0e0;
-    max-width: 700px;
+    max-width: 600px;
     margin: 0 auto;
     text-align: center;
-    width: 90%;
 }
 
 /* Remove conflicting styles from other sections */
@@ -216,46 +273,57 @@ nav ul li a:hover::after{
 
 /* Mobile Responsiveness for Header */
 @media only screen and (max-width: 768px) {
+    .profile-image {
+        width: 100%;
+        height: 100vh;
+        object-position: center;
+    }
+
+    picture {
+        width: 100%;
+        height: 100vh;
+    }
+
     .header-text {
-        padding: 0 5%;
-        transform: translateY(210px);
+        width: 100%;
+        padding: 0 20px;
+        background: rgba(0,0,0,0.6);
+    }
+
+    #header::before {
+        left: 0;
+        width: 100%;
     }
 
     .header-text h1 {
-        font-size: 42px;
+        font-size: 2.5rem;
     }
 
-    .header-text h1 span {
-        color: #fc466a;
-    }
-
-    .role-animation h2 {
-        font-size: 32px;
+    .header-text h2 {
+        font-size: 1.8rem;
     }
 
     .header-desc {
-        font-size: 16px;
-        max-width: 100%;
+        font-size: 1rem;
+    }
+
+    nav {
+        padding: 15px 5%;
     }
 }
 
 @media only screen and (max-width: 600px) {
-    #header {
-        background-image: url(images/Mobile_final_Nero.png);
+    .profile-image {
+        height: 100vh;
+        object-position: center;
     }
-    
+
+    picture {
+        height: 100vh;
+    }
+
     .header-text {
-        position: absolute;
-        left: 0;
-        right: 0;
-        top: 0;
-        bottom: 0;
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        transform: translateY(810px);
+        padding: 0 15px;
     }
     
     .header-text h1 {
@@ -279,6 +347,7 @@ nav ul li a:hover::after{
     padding: 100px 0;
     color: #ababab;
     background-color: #0c0c0c;
+    padding-top: 80px;  /* Adjust based on navbar height */
 }
 
 .row{
@@ -538,7 +607,16 @@ nav ul li a:hover::after{
 
 @media only screen and (max-width: 600px) {
     #header {
-        height: 100vh;
+        background-image: none; /* Remove any background image that might conflict */
+    }
+    
+    /* Remove conflicting styles */
+    #header::after {
+        display: none;
+    }
+    
+    #particles-js {
+        opacity: 0.7;
     }
     
     .tab_tittle {
@@ -656,6 +734,7 @@ nav ul li a:hover::after{
 #Services {
     padding: 100px 0;
     background-color: #0a0a0a;
+    padding-top: 80px;  /* Adjust based on navbar height */
 }
 
 #Services .sub-tittle {
@@ -805,6 +884,7 @@ nav ul li a:hover::after{
     padding: 100px 0;
     background-color: #0c0c0c;
     position: relative;
+    padding-top: 80px;  /* Adjust based on navbar height */
 }
 
 #projects .sub-tittle {
@@ -1037,6 +1117,7 @@ nav ul li a:hover::after{
     padding: 100px 0;
     background-color: #0a0a0a;
     position: relative;
+    padding-top: 80px;  /* Adjust based on navbar height */
 }
 
 #contact .sub-tittle {
@@ -1657,5 +1738,218 @@ form .btn2:hover {
         left: auto;
         position: fixed;
         z-index: 998;
+    }
+}
+
+/* Particles.js container */
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+/* Create a mask for the profile image area where particles shouldn't appear */
+#header::after {
+    display: none; /* Disable this conflicting pseudo-element */
+}
+
+/* Mobile adjustments for particles */
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: none; /* Remove background image since we're using ::before */
+    }
+    
+    #particles-js {
+        opacity: 0.7;
+    }
+}
+
+/* Header text styling - updated for particles */
+.header-text {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    text-align: center;
+    z-index: 5; /* Ensure text is above everything */
+    transform: translateY(250px);
+    margin-top: 80px;
+}
+
+.header-text h1 {
+    display: block;
+    color: #fff;
+    font-size: 48px;
+    margin-bottom: 15px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.header-text h1 span {
+    color: #fc466a;
+    text-shadow: 0 0 15px rgba(252, 70, 107, 0.5);
+}
+
+.role-animation {
+    margin: 0 auto 20px;
+    width: 100%;
+    text-align: center;
+}
+
+.role-animation h2 {
+    font-size: 40px;
+    display: inline-block;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.auto-type {
+    color: #fa3c3cbd;
+    font-family: 'Courier New', Courier, monospace;
+    text-shadow: 0 0 10px rgba(250, 60, 60, 0.5);
+}
+
+.header-desc {
+    font-size: 20px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+    width: 90%;
+    text-shadow: 0 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Animation keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+/* Add animation to services cards */
+.services_list div {
+    animation: fadeInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+.services_list div:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.services_list div:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+/* Add floating animation to about image */
+.about-col-1 img {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Smooth transition for all elements */
+* {
+    transition: all 0.3s ease;
+}
+
+/* Add hover effect to nav links */
+nav ul li a {
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #fc466a;
+    transform: translateY(-2px);
+}
+
+/* Add scale effect to social media icons */
+.social_media_icon a {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social_media_icon a:hover {
+    transform: scale(1.2);
+}
+
+/* Add animation to project cards */
+.work {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(252, 70, 107, 0.3);
+}
+
+/* Add pulse animation to download CV button */
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(252, 70, 107, 0.4);
+    }
+    70% {
+        box-shadow: 0 0 0 10px rgba(252, 70, 107, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 0 rgba(252, 70, 107, 0);
+    }
+}
+
+.btn.btn2 {
+    animation: pulse 2s infinite;
+}
+
+/* Add slide-in animation for contact form */
+.contact_right form {
+    animation: slideInRight 0.6s ease-out;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Mobile responsiveness for particles */
+@media only screen and (max-width: 600px) {
+    #header {
+        background-image: url('./images/Mobile_final_Nero.png');
+    }
+    
+    #particles-js {
+        clip-path: none; /* Show particles everywhere on mobile */
+        opacity: 0.8;
     }
 }
