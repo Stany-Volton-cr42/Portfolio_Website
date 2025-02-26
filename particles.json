@@ -1,25 +1,25 @@
 {
   "particles": {
     "number": {
-      "value": 180,
+      "value": 100,
       "density": {
         "enable": true,
         "value_area": 1000
       }
     },
     "color": {
-      "value": ["#fc466a", "#3f5efb", "#ffffff", "#f66e48"]
+      "value": ["#ff0066", "#4d94ff", "#ffffff", "#ff3333"]
     },
     "shape": {
       "type": "circle"
     },
     "opacity": {
-      "value": 0.9,
-      "random": true,
+      "value": 1,
+      "random": false,
       "anim": {
         "enable": true,
-        "speed": 1,
-        "opacity_min": 0.4,
+        "speed": 0.5,
+        "opacity_min": 0.7,
         "sync": false
       }
     },
@@ -28,17 +28,17 @@
       "random": true,
       "anim": {
         "enable": true,
-        "speed": 2,
-        "size_min": 1,
+        "speed": 1,
+        "size_min": 2,
         "sync": false
       }
     },
     "line_linked": {
       "enable": true,
-      "distance": 120,
-      "color": "#fc466a",
-      "opacity": 0.6,
-      "width": 1.5
+      "distance": 150,
+      "color": "#ff0066",
+      "opacity": 0.9,
+      "width": 2
     },
     "move": {
       "enable": true,
@@ -46,10 +46,10 @@
       "direction": "none",
       "random": false,
       "straight": false,
-      "out_mode": "out",
-      "bounce": false,
+      "out_mode": "bounce",
+      "bounce": true,
       "attract": {
-        "enable": false,
+        "enable": true,
         "rotateX": 600,
         "rotateY": 1200
       }
@@ -60,7 +60,7 @@
     "events": {
       "onhover": {
         "enable": true,
-        "mode": "repulse"
+        "mode": "grab"
       },
       "onclick": {
         "enable": true,
@@ -69,12 +69,14 @@
       "resize": true
     },
     "modes": {
-      "repulse": {
-        "distance": 150,
-        "duration": 0.8
+      "grab": {
+        "distance": 200,
+        "line_linked": {
+          "opacity": 1
+        }
       },
       "push": {
-        "particles_nb": 6
+        "particles_nb": 4
       }
     }
   },

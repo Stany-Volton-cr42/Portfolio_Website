@@ -53,7 +53,7 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0,0,0,0.5);
+    background: rgba(0,0,0,0.3);
     z-index: 3;
 }
 
@@ -250,7 +250,7 @@ nav ul li a:hover::after{
 .auto-type {
     color: #fa3c3cbd;
     font-family: 'Courier New', Courier, monospace;
-    text-shadow: 0 0 10px rgba(250, 60, 60, 0.5);
+    text-shadow: 0 0 10px rgba(243, 2, 2, 0.5);
 }
 
 .header-desc {
@@ -1750,22 +1750,43 @@ form .btn2:hover {
     left: 0;
     z-index: 2;
     pointer-events: none;
-    opacity: 0.8;
+    opacity: 1;
+    will-change: transform;
+    backface-visibility: hidden;
+    perspective: 1000;
+    transform: translateZ(0);
 }
 
-/* Create a mask for the profile image area where particles shouldn't appear */
-#header::after {
-    display: none; /* Disable this conflicting pseudo-element */
+/* Create a gradient mask for particles to fade near the profile image */
+#particles-js::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at center, transparent 30%, rgba(0,0,0,0.4) 100%);
+    pointer-events: none;
 }
 
 /* Mobile adjustments for particles */
-@media only screen and (max-width: 600px) {
-    #header {
-        background-image: none; /* Remove background image since we're using ::before */
+@media only screen and (max-width: 768px) {
+    #particles-js {
+        opacity: 0.9;
     }
     
+    #particles-js::after {
+        background: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.5) 100%);
+    }
+}
+
+@media only screen and (max-width: 600px) {
     #particles-js {
-        opacity: 0.7;
+        opacity: 0.85;
+    }
+    
+    #particles-js::after {
+        background: radial-gradient(circle at center, transparent 10%, rgba(0,0,0,0.6) 100%);
     }
 }
 
