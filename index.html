@@ -12,7 +12,10 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-
+    
+    <!-- Three.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+    
     <!-- Google font link -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -24,6 +27,7 @@
 <body>
 
     <div id="header">
+        <canvas id="threejs-canvas"></canvas>
         <div id="particles-js"></div>
         <!-- Profile image with srcset for responsive images -->
         <picture>
@@ -395,7 +399,8 @@
         })
     </script>
 
-
+    <!-- Three.js Animation -->
+    <script src="animation.js"></script>
 
 </body>
 
